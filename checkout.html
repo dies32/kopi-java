@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | Kopi Java</title>
+</head>
+<body>
+
+    <h1>Checkout Pesanan</h1>
+    <p>Isi data pengiriman sebelum bayar</p>
+
+    <h3>Ringkasan Pesanan</h3>
+    <p id="nama"></p>
+    <p id="harga"></p>
+
+    <form onsubmit="pesan(event)">
+        <input type="text" placeholder="Nama Penerima" required>
+        <br><br>
+
+        <textarea placeholder="Alamat Lengkap" required></textarea>
+        <br><br>
+
+        <input type="text" placeholder="Kota / Kode Pos" required>
+        <br><br>
+
+        <input type="tel" placeholder="No. HP" required>
+        <br><br>
+
+        <h3>Metode Pembayaran</h3>
+        <p>COD (Bayar di Tempat)</p>
+
+        <button type="submit">
+            Konfirmasi Pesanan →
+        </button>
+    </form>
+
+    <script>
+        const nama = localStorage.getItem("namaKopi");
+        const harga = Number(localStorage.getItem("hargaKopi"));
+
+        document.getElementById("nama").textContent =
+            nama || "Belum ada produk";
+
+        document.getElementById("harga").textContent =
+            "Rp" + harga.toLocaleString("id-ID");
+
+        function pesan(event) {
+            event.preventDefault();
+
+            if (!nama || !harga) {
+                alert("Silakan pilih kopi terlebih dahulu!");
+                window.location.href = "index.html";
+                return;
+            }
+
+            window.location.href = "success.html";
+        }
+    </script>
+
+</body>
+</html>
