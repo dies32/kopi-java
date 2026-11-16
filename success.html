@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesanan Berhasil | Kopi Java</title>
+</head>
+<body>
+
+    <h1>☕ Kopi Java</h1>
+
+    <h2>Pesanan Berhasil!</h2>
+
+    <p>Terima kasih sudah berbelanja di Kopi Java.</p>
+
+    <h3>Detail Pesanan</h3>
+
+    <p id="nama"></p>
+    <p id="harga"></p>
+
+    <p>Metode Pembayaran: COD</p>
+
+    <h3>Pesanan kamu sedang diproses.</h3>
+
+    <button onclick="kembali()">
+        Kembali ke Beranda
+    </button>
+
+    <script>
+        const nama = localStorage.getItem("namaKopi");
+        const harga = Number(localStorage.getItem("hargaKopi"));
+
+        document.getElementById("nama").textContent =
+            nama || "Produk tidak ditemukan";
+
+        document.getElementById("harga").textContent =
+            "Total: Rp" + harga.toLocaleString("id-ID");
+
+        function kembali() {
+            localStorage.removeItem("namaKopi");
+            localStorage.removeItem("hargaKopi");
+
+            window.location.href = "index.html";
+        }
+    </script>
+
+</body>
+</html>
