@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kopi Java</title>
+</head>
+<body>
+
+    <h1>☕ Kopi Java</h1>
+    <h2>Pilih Kopi Favoritmu</h2>
+
+    <div>
+        <h3>Kopi Arabika Gayo</h3>
+        <p>Rp35.000</p>
+        <button onclick="beli('Kopi Arabika Gayo', 35000)">
+            Beli
+        </button>
+    </div>
+
+    <div>
+        <h3>Kopi Robusta Lampung</h3>
+        <p>Rp28.000</p>
+        <button onclick="beli('Kopi Robusta Lampung', 28000)">
+            Beli
+        </button>
+    </div>
+
+    <div>
+        <h3>Kopi Luwak</h3>
+        <p>Rp120.000</p>
+        <button onclick="beli('Kopi Luwak', 120000)">
+            Beli
+        </button>
+    </div>
+
+    <div>
+        <h3>Kopi Toraja</h3>
+        <p>Rp42.000</p>
+        <button onclick="beli('Kopi Toraja', 42000)">
+            Beli
+        </button>
+    </div>
+
+    <script>
+        function beli(nama, harga) {
+            localStorage.setItem("namaKopi", nama);
+            localStorage.setItem("hargaKopi", harga);
+            window.location.href = "checkout.html";
+        }
+    </script>
+
+</body>
+</html>
