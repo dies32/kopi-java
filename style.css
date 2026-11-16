@@ -1,0 +1,78 @@
+
+/* PENGATURAN DASAR */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 25px;
+    font-family: Arial, sans-serif;
+    background: #f7f1e8;
+    color: #35251d;
+}
+
+/* JUDUL */
+h1 {
+    text-align: center;
+    font-family: Georgia, serif;
+    font-size: 38px;
+    color: #4b2e20;
+    margin-bottom: 35px;
+}
+
+h2 {
+    text-align: center;
+    font-family: Georgia, serif;
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+/* KARTU PRODUK */
+body > div {
+    background: #fffdf9;
+    padding: 22px;
+    margin: 18px auto;
+    max-width: 500px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+h3 {
+    font-size: 21px;
+    color: #513522;
+}
+
+p {
+    font-size: 17px;
+}
+
+/* TOMBOL */
+button {
+    background: #65432e;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #3e291c;
+}
+
+/* TAMPILAN HP */
+@media (max-width: 600px) {
+    body {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+}
